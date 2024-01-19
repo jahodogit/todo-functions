@@ -23,8 +23,6 @@ export class DeeplTodoTranslator implements Translator{
        const [title] = await this.translator.translate(todoItem.title, to);
        const [description] = await this.translator.translate(todoItem.description, to);
 
-       log('por aqui pase --------------------');
-
        const todo  = new Todo(
         title,
         description,

@@ -20,7 +20,7 @@ export class TodoCreationController{
         const snapshot: QueryDocumentSnapshot | undefined = event.data;
 
         if(!snapshot){
-            log('---------------- No data associated with the event ------------------');
+            log(' No data associated with the event ');
             return;    
         }
 
