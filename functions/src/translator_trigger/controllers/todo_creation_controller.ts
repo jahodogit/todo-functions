@@ -3,7 +3,7 @@ import { DocumentData, QueryDocumentSnapshot } from "firebase-admin/firestore";
 import { FirestoreEvent } from "firebase-functions/v2/firestore";
 import { log,} from "firebase-functions/logger";
 import { Translator } from "../helpers/language_translator/traslator";
-import { DeeplTodoTranslator } from "../helpers/language_translator/deepl_todo_translator";
+import { GoogleTodoTranslator } from "../helpers/language_translator/google_todo_translator";
 import { Todo } from "../models/todo";
 
 
@@ -15,7 +15,7 @@ export class TodoCreationController{
 
     static async onTodoCreated(event : FirestoreEvent<QueryDocumentSnapshot | undefined>){
 
-        const translator: Translator = new DeeplTodoTranslator();
+        const translator: Translator = new GoogleTodoTranslator();
 
         const snapshot: QueryDocumentSnapshot | undefined = event.data;
 

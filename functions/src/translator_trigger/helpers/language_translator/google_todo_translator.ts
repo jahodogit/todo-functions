@@ -1,12 +1,11 @@
 
-import { log } from "firebase-functions/logger";
 import { Translator } from "./traslator";
 import  { v2 }  from "@google-cloud/translate"
 import { Todo } from "../../models/todo";
 
 
 
-export class DeeplTodoTranslator implements Translator{
+export class GoogleTodoTranslator implements Translator{
 
    
    
